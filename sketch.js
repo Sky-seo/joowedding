@@ -74,7 +74,7 @@ function draw() {
     if (isCompleted) {
         background(0);
         fill(255); noStroke(); textAlign(CENTER, CENTER);
-        textSize(24); text('DONE / 업로드 완료 ✅', width/2, height/2 - 20);
+        textSize(24); text('successfully shared to Juwon & Joo!', width/2, height/2 - 20);
         return;
     }
 
