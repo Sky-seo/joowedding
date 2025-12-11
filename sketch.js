@@ -401,6 +401,7 @@ function positionControlElements() {
     const doneY = inputY + 70;
 
     const inputMinX = PREVIEW_MARGIN;
+    //const inputMaxX = width - PREVIEW_MARGIN - nameInputWidth;
     const buttonMinX = PREVIEW_MARGIN;
     const buttonMaxX = width - PREVIEW_MARGIN - DONE_BUTTON_WIDTH;
 
