@@ -3,7 +3,7 @@
 const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzDAUzwVR9J73BhahX2y2gySw4YBYcUaZZagNLzC7CokiNUP8VC-KhVaV1C8Geq2HKw/exec';
 
 // ✅ 최대 전송 효율을 위한 청크 크기 (약 35MB)
-const CHUNK_SIZE = 25 * 1024 * 1024;
+const CHUNK_SIZE = 10 * 1024 * 1024;
 
 // Blob → base64 문자열로 변환
 function blobToBase64(blob) {
