@@ -392,7 +392,6 @@ function updatePreviewBounds() {
 }
 
 function positionControlElements() {
-    const pageCenterX = width / 2;
     const previewCenterX = previewBounds.x + previewBounds.width / 2;
     const nameInputWidth = previewBounds.width - 50;
 
@@ -400,17 +399,10 @@ function positionControlElements() {
     const inputY = previewBounds.y + previewBounds.height + 50;
     const doneY = inputY + 70;
 
-    const inputMinX = PREVIEW_MARGIN;
-    const inputMaxX = width - PREVIEW_MARGIN - nameInputWidth;
-    const buttonMinX = PREVIEW_MARGIN;
-    const buttonMaxX = width - PREVIEW_MARGIN - DONE_BUTTON_WIDTH;
-
-    const addMin = previewBounds.x + 15;
-    const addMax = max(addMin, previewBounds.x + previewBounds.width - ADD_BUTTON_WIDTH - 15);
-
-    const inputX = constrain(pageCenterX - nameInputWidth / 2 - 50, inputMinX, inputMaxX);
-    const addMoreX = constrain(previewCenterX - ADD_BUTTON_WIDTH / 2, addMin, addMax);
-    const doneX = constrain(pageCenterX - DONE_BUTTON_WIDTH / 2, buttonMinX, buttonMaxX);
+    // 모두 previewCenterX 기준으로 가운데 정렬
+    const inputX = previewCenterX - nameInputWidth / 2 - 25;
+    const addMoreX = previewCenterX - ADD_BUTTON_WIDTH / 2;
+    const doneX = previewCenterX - DONE_BUTTON_WIDTH / 2;
 
     nameInputElement.position(inputX, inputY);
     nameInputElement.style('width', `${nameInputWidth}px`);
