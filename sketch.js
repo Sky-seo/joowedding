@@ -401,14 +401,13 @@ function positionControlElements() {
     const doneY = inputY + 70;
 
     const inputMinX = PREVIEW_MARGIN;
-    const inputMaxX = width - PREVIEW_MARGIN - nameInputWidth;
     const buttonMinX = PREVIEW_MARGIN;
     const buttonMaxX = width - PREVIEW_MARGIN - DONE_BUTTON_WIDTH;
 
     const addMin = previewBounds.x + 15;
     const addMax = max(addMin, previewBounds.x + previewBounds.width - ADD_BUTTON_WIDTH - 15);
 
-    const inputX = constrain(pageCenterX - nameInputWidth / 2, inputMinX, inputMaxX);
+    const inputX = constrain(pageCenterX - nameInputWidth / 2, inputMinX, 0);
     const addMoreX = constrain(previewCenterX - ADD_BUTTON_WIDTH / 2, addMin, addMax);
     const doneX = constrain(pageCenterX - DONE_BUTTON_WIDTH / 2, buttonMinX, buttonMaxX);
 
